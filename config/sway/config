@@ -15,9 +15,6 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term kitty
-# Your preferred application launcher
-# Note: it's recommended that you pass the final command to sway
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
 ### Output configuration
 #
@@ -69,9 +66,6 @@ xwayland disable
 
     # Kill focused window
     bindsym $mod+Shift+q kill
-
-    # Start your launcher
-    bindsym $mod+d exec $menu
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -218,3 +212,4 @@ bar {
 
 include /etc/sway/config.d/*
 include ./border.conf
+include ./launcher.conf
