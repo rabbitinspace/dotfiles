@@ -8,3 +8,11 @@ Here's used software:
 - **WM**: [sway](https://swaywm.org/)
 - **Launcher**: [fzf](https://github.com/junegunn/fzf)
 - **File Manager**: [ranger](https://github.com/ranger/ranger)
+
+## Installation
+
+```bash
+cd $HOME
+git clone git@github.com:rabbitinspace/dotfiles.git .dotfiles
+ln -s .dotfiles/config .config
+```
