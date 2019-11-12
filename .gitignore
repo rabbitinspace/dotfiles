@@ -2,3 +2,5 @@ config/fish/fish_variables
 config/yay
 config/dconf
 config/pulse
+config/coc
+config/nvim/.netrwhist
