@@ -13,9 +13,6 @@ set cmdheight=2
 " coc plugin want this to display diagnostic messages early
 set updatetime=300
 
-" autosave after `updatetime`
-autocmd CursorHold,CursorHoldI * update
-
 " coc plugin want this
 set shortmess+=c
 
@@ -28,7 +25,10 @@ set number
 setlocal et sw=4 sts=4 ts=8
 
 " import children configs
+" vimgo should be loaded before coc (or not, I don't know)
 let $plugins = stdpath('config') . '/plugins.vimrc'
+let $vimgo = stdpath('config') . '/vimgo.vimrc'
 let $coc = stdpath('config') . '/coc.vimrc'
 source $plugins
+source $vimgo 
 source $coc

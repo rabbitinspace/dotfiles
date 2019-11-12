@@ -1,3 +1,7 @@
+# environment variables
+set -x GOBIN /usr/local/bin
+set -x GOPATH "$HOME"/.go
+
 # wayland
 set -x MOZ_ENABLE_WAYLAND 1
 
