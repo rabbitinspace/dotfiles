@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+main() {
+  local x=$1
+  local y=$2
+  local columns=$3
+  local lines=$4
+  local path=$5
+
+  kitty icat --place="${columns}x${lines}@${x}x${y}" \
+      --transfer-mode=file \
+      --clear
+}
+
+main "$@"
