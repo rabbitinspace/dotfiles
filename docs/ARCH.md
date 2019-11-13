@@ -97,7 +97,10 @@ Now go to official installatoin guide [1] and follow it. On `pacstrap` step some
 Next modify `mkinitcpio.conf` to include to have `systemd` hooks (including `sd-encrypt`), `amdgpu` module and `btrfs` binary:
 
 ```
-TODO
+MODULES=(amdgpu)
+BINARIES=(/usr/bin/btrfs)
+FILES=()
+HOOKS=(base systemd autodetect keyboard sd-vconsole modconf block sd-encrypt filesystems fsck)
 ```
 
 Check with [3] just in case of updates.
@@ -125,8 +128,14 @@ blkid
 Create `/boot/loader/entries/arch.conf` to have this stuff:
 
 ```
-TODO
+title Arch Linux
+linux /vmlinuz-linux
+initrd /amd-ucode.img
+initrd /initramfs-linux.img
+options rd.luks.name=<UUID>=system root=/dev/mapper/system rootflags=subvol=@ rd.luks.options=discard
 ```
+
+The `options` are mostly from [3] to decrypt disk before boot (<UUID> partition will be decrypted and mapped to `/dev/mapper/system`).
 
 Edit `/boot/loader/loader.conf` to have this stuff:
 
@@ -156,4 +165,4 @@ Don't forget to do post-installation steps like add new user (myself) and setup 
 
 - What about TRIM?
 
-Automatic TRIM is not enabled (no `discard` option in `/etc/fstab`). But mapping device (`/dev/mapper/system`) will redirect TRIM events to real SSD since we've specified `ld.options=discard` kernel option. You need to issue TRIM events via `fstrim` service: [see this article](https://wiki.archlinux.org/index.php/Solid_state_drive#Periodic_TRIM).
+Automatic TRIM is not enabled (no `discard` option in `/etc/fstab`). But mapping device (`/dev/mapper/system`) will redirect TRIM events to real SSD since we've specified `rd.luks.options=discard` kernel option. You need to issue TRIM events via `fstrim` service: [see this article](https://wiki.archlinux.org/index.php/Solid_state_drive#Periodic_TRIM).
