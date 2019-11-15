@@ -2,5 +2,10 @@ config/fish/fish_variables
 config/yay
 config/dconf
 config/pulse
-config/coc
 config/nvim/.netrwhist
+config/vifm/colors/
+config/vifm/vifm-help.txt
+config/vifm/vifminfo
+config/configstore
+config/coc
+!config/coc/extensions/package.json

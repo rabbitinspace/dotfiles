@@ -1,4 +1,5 @@
 # environment variables
+set -x EDITOR nvim
 set -x GOBIN /usr/local/bin
 set -x GOPATH "$HOME"/.go
 
