@@ -2,7 +2,7 @@
 
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'Tomorrow_Night_Blue',
+      \ 'colorscheme': 'edge',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]

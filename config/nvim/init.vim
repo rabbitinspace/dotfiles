@@ -26,6 +26,11 @@ set fileencoding=utf-8
 set nobackup
 set nowritebackup
 
+" colors
+set termguicolors
+set background=dark
+colorscheme edge
+
 " more space for messages (do I need it?)
 set cmdheight=2
 
