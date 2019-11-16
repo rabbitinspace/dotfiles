@@ -1,9 +1,12 @@
 {
-  "languageserver": {
-    "golang": {
-      "command": "gopls",
-      "rootPatterns": ["go.mod"],
-      "filetypes": ["go"]
-    }
-  }
+    "languageserver": {
+        "golang": {
+        "command": "gopls",
+        "rootPatterns": ["go.mod"],
+        "filetypes": ["go"]
+        }
+    },
+    
+    // rust
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
 }
