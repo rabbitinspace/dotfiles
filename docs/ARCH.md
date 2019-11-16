@@ -163,6 +163,9 @@ Don't forget to do post-installation steps like add new user (myself) and setup 
 
 # FAQ
 
-- What about TRIM?
-
+- **What about TRIM?**  
 Automatic TRIM is not enabled (no `discard` option in `/etc/fstab`). But mapping device (`/dev/mapper/system`) will redirect TRIM events to real SSD since we've specified `rd.luks.options=discard` kernel option. You need to issue TRIM events via `fstrim` service: [see this article](https://wiki.archlinux.org/index.php/Solid_state_drive#Periodic_TRIM).
+
+- **What about Swap?**  
+Need to figure that out.
+
