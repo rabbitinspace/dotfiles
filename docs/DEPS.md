@@ -14,6 +14,7 @@ ttf-fira-code   # terminal fonts
 
 fzf             # for launcher
 vifm            # file manager
+neovim          # text editor
 yay             # AUR helper (manual installation)
 
 git             # to get dotfiles
