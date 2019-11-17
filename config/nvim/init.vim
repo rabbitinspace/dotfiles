@@ -5,12 +5,10 @@ let $plugins = stdpath('config') . '/plugins.vimrc'
 let $coc = stdpath('config') . '/coc.vimrc'
 let $vimgo = stdpath('config') . '/vimgo.vimrc'
 let $lightline = stdpath('config') . '/lightline.vimrc'
-let $vista = stdpath('config') . '/vista.vimrc'
 source $plugins
 source $coc
 source $vimgo 
 source $lightline
-source $vista
 
 " hide buffers instead of saving
 set hidden
