@@ -6,7 +6,7 @@ Here's used software:
 - **Shell**: [fish](https://fishshell.com/)
 - **Editor**: [neovim](https://neovim.io/)
 - **Prompt**: [starship](https://starship.rs/)
-- **WM**: [sway](https://swaywm.org/)
+- **WM**: [sway](https://swaywm.org/) + [waybar](https://github.com/Alexays/Waybar)
 - **Launcher**: [fzf](https://github.com/junegunn/fzf)
 - **File Manager**: [vifm](https://vifm.info/)
 
