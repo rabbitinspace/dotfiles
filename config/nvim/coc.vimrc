@@ -107,3 +107,12 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" yank history
+nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
+" files list
+nnoremap <silent> <space>f  :<C-u>CocList files<cr>
+" buffers list
+nnoremap <silent> <space>b  :<C-u>CocList buffers<cr>
+" scroll floating window
+nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
+nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"

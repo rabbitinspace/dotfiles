@@ -5,10 +5,12 @@ let $plugins = stdpath('config') . '/plugins.vimrc'
 let $coc = stdpath('config') . '/coc.vimrc'
 let $vimgo = stdpath('config') . '/vimgo.vimrc'
 let $lightline = stdpath('config') . '/lightline.vimrc'
+let $netrw = stdpath('config') . '/netrw.vimrc'
 source $plugins
 source $coc
 source $vimgo 
 source $lightline
+source $netrw
 
 " hide buffers instead of saving
 set hidden

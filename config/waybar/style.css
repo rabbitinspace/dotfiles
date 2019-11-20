@@ -1,0 +1,46 @@
+/* Styling configuration for waybar */
+* {
+    border: none;
+    border-radius: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: #262729;
+}
+
+#workspaces button {
+    padding: 2 5px;
+    background-color: transparent;
+    color: #88909f;
+    /* border-bottom: 2px solid transparent; */
+}
+
+#workspaces button:hover {
+    color: #d390e7;
+
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: #262729;
+    border: none;
+    padding: 0 5px;
+}
+
+#workspaces button.focused {
+    color: #d390e7;
+    border-bottom: 2px solid #d390e7;
+}
+
+#workspaces button.urgent {
+    background-color: #dbb774;
+}
+
+#clock,
+#pulseaudio {
+    padding: 2 5px;
+    margin: 0 0 0 4px;
+    color: #88909f;
+    border-bottom: 2px solid #88909f;
+}
