@@ -56,6 +56,9 @@ xwayland disable
 #
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
+input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
+    pointer_accel -0.75
+}
 
 ### Key bindings
 #
