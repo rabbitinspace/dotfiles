@@ -9,11 +9,11 @@
         "format-muted": "M",
         "format-icons": {
             "headphones": "H",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
+            "handsfree": "?",
+            "headset": "B",
+            "phone": "?",
+            "portable": "?",
+            "car": "?",
             "default": "V"
         },
         "scroll-step": 1
