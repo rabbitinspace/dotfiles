@@ -22,6 +22,10 @@ set visualbell
 set encoding=utf-8
 set fileencoding=utf-8
 
+" better splits
+set splitbelow
+set splitright
+
 " disable backups (because of coc plugin)
 set nobackup
 set nowritebackup
