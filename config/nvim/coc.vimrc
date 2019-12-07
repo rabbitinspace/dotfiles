@@ -116,3 +116,5 @@ nnoremap <silent> <space>b  :<C-u>CocList buffers<cr>
 " scroll floating window
 nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
+" coc explorer
+nmap ge :CocCommand explorer<CR>
