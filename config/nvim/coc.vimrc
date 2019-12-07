@@ -73,9 +73,9 @@ xmap af <Plug>(coc-funcobj-a)
 omap if <Plug>(coc-funcobj-i)
 omap af <Plug>(coc-funcobj-a)
 
-" use <leader>rs for select selections ranges, needs server support, like: coc-tsserver, coc-python
-nmap <silent> <leader>rs <Plug>(coc-range-select)
-xmap <silent> <leader>rs <Plug>(coc-range-select)
+" use <leader>sr for select selections ranges, needs server support, like: coc-tsserver, coc-python
+nmap <silent> <leader>sr <Plug>(coc-range-select)
+xmap <silent> <leader>sr <Plug>(coc-range-select)
 
 " use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')
