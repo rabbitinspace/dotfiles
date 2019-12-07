@@ -19,9 +19,9 @@ inoremap <silent><expr> <c-space> coc#refresh()
 " coc only does snippet and additional edit on confirm.
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" use `[g` and `]g` to navigate diagnostics
-nmap <silent> [g <Plug>(coc-diagnostic-prev)
-nmap <silent> ]g <Plug>(coc-diagnostic-next)
+" use `g[` and `g]` to navigate diagnostics
+nmap <silent> g[ <Plug>(coc-diagnostic-prev)
+nmap <silent> g] <Plug>(coc-diagnostic-next)
 
 " remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
@@ -86,8 +86,8 @@ command! -nargs=? Fold :call     CocAction('fold', <f-args>)
 " use `:OR` for organize import of current buffer
 command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
 
-" add status line support, for integration with other plugin, checkout `:h coc-status`
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+" coc explorer
+nmap <leader>ex :CocCommand explorer<CR>
 
 " using CocList
 " show all diagnostics
@@ -116,5 +116,3 @@ nnoremap <silent> <space>b  :<C-u>CocList buffers<cr>
 " scroll floating window
 nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"
-" coc explorer
-nmap ge :CocCommand explorer<CR>
