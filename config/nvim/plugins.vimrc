@@ -6,6 +6,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'itchyny/lightline.vim'
 
 Plug 'sheerun/vim-polyglot'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'sainnhe/edge'
 
