@@ -1,0 +1,12 @@
+# Configuration for mako notifications daemon
+
+anchor=top-right
+background-color=#262729
+text-color=#b7bec9
+border-color=#e77171
+
+margin=16
+padding=8
+border-size=4
+
+icons=0
