@@ -5,6 +5,7 @@ List of required/recommended dependencies for new Arch installation:
 ```bash
 sway            # window manager
 mako            # notifications daemon
+libnotify       # DNS implementation
 waybar          # toolbar
 ly              # display manager
 
