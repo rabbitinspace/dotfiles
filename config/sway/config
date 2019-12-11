@@ -211,4 +211,5 @@ bindsym $mod+r mode "resize"
     include /etc/sway/config.d/*
     include border.conf
     include launcher.conf
-include bar.conf
+    include bar.conf
+    include notifications.conf
