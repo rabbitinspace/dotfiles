@@ -30,6 +30,9 @@ set splitright
 set nobackup
 set nowritebackup
 
+" use system clipboard
+set clipboard=unnamedplus
+
 " colors
 set termguicolors
 set background=dark
