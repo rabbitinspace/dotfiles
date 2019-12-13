@@ -8,6 +8,7 @@ mako            # notifications daemon
 libnotify       # DNS implementation
 waybar          # toolbar
 ly              # display manager
+wl-clipboard    # clipoard utilities
 
 kitty           # terminal emulator
 imagemagick     # for kitty to display images
