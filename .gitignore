@@ -10,4 +10,6 @@ config/vifm/vifm-help.txt
 config/vifm/vifminfo
 config/configstore
 config/coc
+
+!config/pulse/default.pa
 !config/coc/extensions/package.json
