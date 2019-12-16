@@ -89,30 +89,6 @@ command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organize
 " coc explorer
 nmap <leader>ex :CocCommand explorer<CR>
 
-" using CocList
-" show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-
-" find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-" yank history
-nnoremap <silent> <space>y  :<C-u>CocList -A --normal yank<cr>
-" files list
-nnoremap <silent> <space>f  :<C-u>CocList files<cr>
-" buffers list
-nnoremap <silent> <space>b  :<C-u>CocList buffers<cr>
 " scroll floating window
 nnoremap <expr><C-f> coc#util#has_float() ? coc#util#float_scroll(1) : "\<C-f>"
 nnoremap <expr><C-b> coc#util#has_float() ? coc#util#float_scroll(0) : "\<C-b>"

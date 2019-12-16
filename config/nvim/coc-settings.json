@@ -26,6 +26,13 @@
             "ignoredRootPaths": [
                 "~"
             ]
+        },
+        "terraform": {
+            "command": "terraform-lsp",
+            "filetypes": [
+                "terraform"
+            ],
+            "initializationOptions": {}
         }
     },
     // rust

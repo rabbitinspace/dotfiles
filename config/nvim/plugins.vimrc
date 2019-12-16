@@ -2,14 +2,28 @@
 
 call plug#begin(stdpath('data') . '/plugged')
 
+" LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
+
+" Multilanguage support
+Plug 'sheerun/vim-polyglot'
+
+" Tags browser
 Plug 'liuchengxu/vista.vim'
+
+" Command pallete
+Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
+
+" Highlight yanked text
+Plug 'machakann/vim-highlightedyank'
+
+" Status line
 Plug 'itchyny/lightline.vim'
 
-Plug 'sheerun/vim-polyglot'
+" Autoclose brackets
 Plug 'jiangmiao/auto-pairs'
 
+" Color scheme
 Plug 'sainnhe/edge'
 
 call plug#end()
