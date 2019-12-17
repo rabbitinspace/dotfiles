@@ -36,5 +36,8 @@
         }
     },
     // rust
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
+
+    // python
+    "python.jediEnabled": false
 }

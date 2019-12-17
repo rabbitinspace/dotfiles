@@ -20,6 +20,9 @@ Plug 'machakann/vim-highlightedyank'
 " Status line
 Plug 'itchyny/lightline.vim'
 
+" Git changes on left side
+Plug 'mhinz/vim-signify'
+
 " Autoclose brackets
 Plug 'jiangmiao/auto-pairs'
 
