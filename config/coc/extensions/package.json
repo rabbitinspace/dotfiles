@@ -3,6 +3,6 @@
     "coc-explorer": ">=0.2.6",
     "coc-json": ">=1.2.4",
     "coc-python": ">=1.2.6",
-    "coc-rust-analyzer": ">=0.0.19"
+    "coc-rust-analyzer": ">=0.0.21"
   }
 }
