@@ -10,10 +10,7 @@
             ],
             "filetypes": [
                 "go"
-            ],
-            "initializationOptions": {
-                "usePlaceholders": true
-            }
+            ]
         },
         "bash": {
             "command": "bash-language-server",
