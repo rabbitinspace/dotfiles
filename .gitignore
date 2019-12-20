@@ -5,11 +5,9 @@ config/yay
 config/dconf
 config/pulse
 config/nvim/.netrwhist
-config/vifm/colors/
-config/vifm/vifm-help.txt
-config/vifm/vifminfo
 config/configstore
 config/coc
+config/Zeal
 
 !config/pulse/default.pa
 !config/coc/extensions/package.json
