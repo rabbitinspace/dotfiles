@@ -1,7 +1,0 @@
-" Configuration for vifm
-set vicmd=nvim
-
-fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-         \ imgd %px %py %pw %ph %c
-         \ %pc
-         \ imgc %px %py %pw %ph
