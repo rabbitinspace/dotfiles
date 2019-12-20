@@ -10,7 +10,11 @@
             ],
             "filetypes": [
                 "go"
-            ]
+            ],
+            "initializationOptions": {
+                "hoverKind": "FullDocumentation",
+                "completeUnimported": true
+            }
         },
         "bash": {
             "command": "bash-language-server",
