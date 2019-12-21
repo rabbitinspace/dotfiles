@@ -16,8 +16,7 @@ fish            # shell
 starship        # fish prompt
 ttf-fira-code   # terminal fonts
 
-fzf             # for launcher
-vifm            # file manager
+fzf             # fuzzy search (used in launcher)
 neovim          # text editor
 yay             # AUR helper (manual installation)
 tig             # git TUI
