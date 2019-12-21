@@ -21,7 +21,7 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'itchyny/lightline.vim'
 
 " Git changes on left side
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 
 " Autoclose brackets
 Plug 'jiangmiao/auto-pairs'
