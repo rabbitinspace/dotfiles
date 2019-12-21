@@ -7,6 +7,8 @@ set -x GOPATH "$HOME"/.go
 set -x MOZ_ENABLE_WAYLAND 1
 set -x QT_QPA_PLATFORM wayland-egl
 
-
 # prompt
 starship init fish | source
+
+# set colors
+edge_neon_colors
