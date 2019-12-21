@@ -11,3 +11,5 @@ config/Zeal
 
 !config/pulse/default.pa
 !config/coc/extensions/package.json
+
+config/jesseduffield/lazygit/state.yml
