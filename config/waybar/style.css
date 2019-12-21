@@ -8,7 +8,7 @@
 }
 
 window#waybar {
-    background-color: #262729;
+    background-color: #23252e;
 }
 
 #workspaces button {
@@ -19,22 +19,22 @@ window#waybar {
 }
 
 #workspaces button:hover {
-    color: #d390e7;
+    color: #d898eb;
 
     box-shadow: inherit;
     text-shadow: inherit;
-    background: #262729;
+    background: #23252e;
     border: none;
     padding: 0 5px;
 }
 
 #workspaces button.focused {
-    color: #d390e7;
-    border-bottom: 2px solid #d390e7;
+    color: #d898eb;
+    border-bottom: 2px solid #d898eb;
 }
 
 #workspaces button.urgent {
-    background-color: #dbb774;
+    background-color: #d0b073;
 }
 
 #clock,

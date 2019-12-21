@@ -3,12 +3,10 @@
 " import children configs
 let $plugins = stdpath('config') . '/plugins.vimrc'
 let $coc = stdpath('config') . '/coc.vimrc'
-let $vimgo = stdpath('config') . '/vimgo.vimrc'
 let $lightline = stdpath('config') . '/lightline.vimrc'
 let $netrw = stdpath('config') . '/netrw.vimrc'
 source $plugins
 source $coc
-source $vimgo 
 source $lightline
 source $netrw
 
@@ -36,6 +34,8 @@ set clipboard=unnamedplus
 " colors
 set termguicolors
 set background=dark
+let g:edge_style = 'neon'
+let g:edge_disable_italic_comment = 1
 colorscheme edge
 
 " more space for messages (do I need it?)
@@ -51,6 +51,9 @@ set shortmess+=c
 set number
 set signcolumn=yes
 highlight clear signcolumn
+
+" highlight current line
+set cursorline
 
 " spaces by default
 setlocal et sw=4 sts=4 ts=4
