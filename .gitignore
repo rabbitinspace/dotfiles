@@ -13,3 +13,4 @@ config/Zeal
 !config/coc/extensions/package.json
 
 config/jesseduffield/lazygit/state.yml
+config/dlv/.dbg_history
