@@ -14,7 +14,7 @@ kitty                 # terminal emulator
 imagemagick           # for kitty to display images
 fish                  # shell
 starship              # fish prompt
-ttf-fira-code         # terminal fonts
+nerd-fonts-fira-code  # terminal fonts (aur)
 
 fzf                   # fuzzy search (used in launcher)
 neovim                # text editor
