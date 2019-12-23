@@ -1,21 +1,5 @@
 {
     "languageserver": {
-        "golang": {
-            "command": "gopls",
-            "rootPatterns": [
-                "go.mod",
-                ".vim/",
-                ".git/",
-                ".hg/"
-            ],
-            "filetypes": [
-                "go"
-            ],
-            "initializationOptions": {
-                "hoverKind": "FullDocumentation",
-                "completeUnimported": true
-            }
-        },
         "bash": {
             "command": "bash-language-server",
             "args": [
@@ -36,6 +20,14 @@
             "initializationOptions": {}
         }
     },
+
     // rust
-    "rust-analyzer.enableCargoWatchOnStartup": "enabled"
+    "rust-analyzer.enableCargoWatchOnStartup": "enabled",
+
+    // go
+    "go.goplsPath": "gopls",
+    "go.goplsOptions": {
+        "hoverKind": "FullDocumentation",
+        "completeUnimported": true
+    }
 }
