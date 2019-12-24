@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "coc-explorer": ">=0.2.7",
+    "coc-explorer": ">=0.2.8",
     "coc-go": ">=0.6.0",
     "coc-json": ">=1.2.4",
     "coc-python": ">=1.2.6",
