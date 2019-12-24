@@ -2,10 +2,12 @@
 
 " import children configs
 let $plugins = stdpath('config') . '/plugins.vimrc'
+let $vimgo = stdpath('config') . '/vimgo.vimrc'
 let $coc = stdpath('config') . '/coc.vimrc'
 let $lightline = stdpath('config') . '/lightline.vimrc'
 let $netrw = stdpath('config') . '/netrw.vimrc'
 source $plugins
+source $vimgo
 source $coc
 source $lightline
 source $netrw
