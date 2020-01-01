@@ -1,9 +1,10 @@
 {
   "dependencies": {
-    "coc-explorer": ">=0.2.8",
+    "coc-explorer": ">=0.2.10",
     "coc-go": ">=0.6.0",
     "coc-json": ">=1.2.4",
     "coc-python": ">=1.2.6",
-    "coc-rust-analyzer": ">=0.0.21"
+    "coc-rust-analyzer": ">=0.2.0",
+    "coc-tsserver": ">=1.4.9"
   }
 }
