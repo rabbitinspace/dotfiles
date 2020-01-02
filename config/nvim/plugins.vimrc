@@ -23,9 +23,6 @@ Plug 'itchyny/lightline.vim'
 " Git changes on left side
 Plug 'mhinz/vim-signify'
 
-" Autoclose brackets
-Plug 'jiangmiao/auto-pairs'
-
 " Color scheme
 Plug 'sainnhe/edge'
 
