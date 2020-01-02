@@ -36,5 +36,16 @@
     "python.linting.mypyPath": "mypy",
     "python.formatting.provider": "yapf",
     "python.formatting.yapfPath": "yapf",
-    "python.formatting.yapfArgs": ["--style", "{based_on_style: pep8, indent_width: 2, continuation_indent_width: 4}"]
+    "python.formatting.yapfArgs": ["--style", "{based_on_style: pep8, indent_width: 2, continuation_indent_width: 4}"],
+
+    // ruby
+    "solargraph.diagnostics": true,
+    "solargraph.completion": true,
+    "solargraph.hover": true,
+    "solargraph.formatting": true,
+    "solargraph.symbols": true,
+    "solargraph.definitions": true,
+    "solargraph.rename": true,
+    "solargraph.references": true,
+    "solargraph.folding": true
 }
