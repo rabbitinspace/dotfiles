@@ -1,12 +1,20 @@
 # variables
 include vars.conf
 
-# display
-output * bg $HOME/.config/sway/bg.png fill
-output HDMI-A-1 scale 2
+# waybar
+bar {
+    swaybar_command waybar
+}
+
+# notifications
+exec $notid
 
 # disable X
 xwayland disable
+
+# display
+output * bg $HOME/.config/sway/bg.png fill
+output HDMI-A-1 scale 2
 
 # mouse
 input "1133:49291:Logitech_G502_HERO_Gaming_Mouse" {
@@ -19,11 +27,15 @@ input "1452:591:Keychron_K1_K1-Keyboard" {
     xkb_options caps:escape
 }
 
-# windows
+# move floating window with mouse
 floating_modifier $mod normal
 
 # open term
 bindsym $mod+Return exec $term
+
+# open launcher
+for_window [app_id="^launcher$"] floating enable, border pixel 4, sticky enable, resize set 1200 400
+bindsym $mod+d exec $menu
 
 # control
 bindsym $mod+Shift+q kill
@@ -128,6 +140,3 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 # imports
 include /etc/sway/config.d/*
 include style.conf
-include launcher.conf
-include bar.conf
-include notifications.conf
