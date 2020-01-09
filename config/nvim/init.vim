@@ -2,14 +2,10 @@
 
 " import children configs
 let $plugins = stdpath('config') . '/plugins.vimrc'
-let $vimgo = stdpath('config') . '/vimgo.vimrc'
 let $coc = stdpath('config') . '/coc.vimrc'
-let $lightline = stdpath('config') . '/lightline.vimrc'
 let $netrw = stdpath('config') . '/netrw.vimrc'
 source $plugins
-source $vimgo
 source $coc
-source $lightline
 source $netrw
 
 " hide buffers instead of saving
@@ -33,12 +29,14 @@ set nowritebackup
 " use system clipboard
 set clipboard=unnamedplus
 
+" disable status
+set noshowmode
+
 " colors
 set termguicolors
 set background=dark
-let g:edge_style = 'neon'
-let g:edge_disable_italic_comment = 1
 colorscheme edge
+highlight link HighlightedyankRegion Search
 
 " more space for messages (do I need it?)
 set cmdheight=2
@@ -58,5 +56,5 @@ highlight clear signcolumn
 set cursorline
 
 " spaces by default
-setlocal et sw=4 sts=4 ts=4
+set et sw=4 sts=4 ts=4
 
