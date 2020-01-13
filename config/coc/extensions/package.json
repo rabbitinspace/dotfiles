@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "coc-explorer": ">=0.2.12",
+    "coc-explorer": ">=0.2.15",
     "coc-go": ">=0.6.2",
     "coc-json": ">=1.2.4",
     "coc-pairs": ">=1.2.20",
     "coc-python": ">=1.2.6",
-    "coc-rust-analyzer": ">=0.2.1",
-    "coc-solargraph": ">=1.1.3",
+    "coc-rust-analyzer": ">=0.2.2",
+    "coc-solargraph": ">=1.1.4",
     "coc-tsserver": ">=1.4.9"
   }
 }
