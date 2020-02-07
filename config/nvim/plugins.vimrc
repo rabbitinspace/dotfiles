@@ -12,7 +12,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'liuchengxu/vista.vim'
 
 " Command pallete
-Plug 'liuchengxu/vim-clap', { 'do': function('clap#helper#build_all') }
+Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
 
 " Highlight yanked text
 Plug 'machakann/vim-highlightedyank'

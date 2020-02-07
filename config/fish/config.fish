@@ -12,3 +12,9 @@ starship init fish | source
 
 # set colors
 edge_neon_colors
+
+# sway
+if test -z "$DISPLAY" && test (tty) = /dev/tty1
+  set -x XKB_DEFAULT_LAYOUT us
+  exec sway
+end
