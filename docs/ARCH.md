@@ -18,19 +18,6 @@ Do all steps from the official guide [1] that before disk partitioning.
 
 There will be two partitions: `/efi` and `/`.
 
-```bash
-# format the disk
-sgdisk --zap-all /dev/nvme0n1
-
-# create partitions
-sgdisk --clear \
-         --new=1:0:+512MiB --typecode=1:ef00 \
-         --new=3:0:0       --typecode=3:8300 \
-           /dev/nvme0n1
-```
-
-I didn't test this^ and if it doesn't work use `gdisk`:
-
 ```
 gdisk /dev/nvme0n1
 o (Create a new empty GUID partition table (GPT))
@@ -51,10 +38,10 @@ Y
 
 ## Encryption
 
-Create LUKS container (luks2, aes-xts-plain64, sha256):
+Create LUKS container (luks2, aes-xts-plain64, sha512 / 2 (because of aes-xtc)):
 
 ```bash
-cryptsetup --key-size 512 --align-payload 8192 --verify-passphrase luksFormat /dev/nvme0n1p2
+cryptsetup --key-size 512 --align-payload 4096 --verify-passphrase luksFormat /dev/nvme0n1p2
 
 # 'system' here is a name of mapped device: /dev/mapper/system
 cryptsetup open /dev/nvme0n1p2 system
@@ -67,12 +54,12 @@ First, format partitions:
 ```bash
 # FAT32 but backward compatible or something
 mkfs.vfat -F32 /dev/nvme0n1p1
-mkfs.btrfs /dev/mapper/system
+mkfs.btrfs -s 4096 /dev/mapper/system
 ```
 
 Then, create and mount btrfs subvolumes:
 
-```baah
+```bash
 opts=ssd,compress=lzo,noatime,nodiratime
 
 # mount temporary to create subvolumes
@@ -92,7 +79,7 @@ mount /dev/nvme0n1p1 /mnt/boot
 
 ## Installation
 
-Now go to official installatoin guide [1] and follow it. On `pacstrap` step some additional packages are required: `dhcpcd`, `amd-ucode`, `btrfs-progs`, `neovim`, `base-devel`, `sudo`, `man`. Get back on `initramfs` step.
+Now go to official installatoin guide [1] and follow it. On `pacstrap` step some additional packages are required: `amd-ucode`, `btrfs-progs`, `neovim`, `base-devel`, `sudo`, `man`. Get back on `initramfs` step.
 
 Next modify `mkinitcpio.conf` to include to have `systemd` hooks (including `sd-encrypt`), `amdgpu` module and `btrfs` binary:
 
@@ -157,15 +144,18 @@ umount -R /mnt
 reboot
 ```
 
-Arch is not installed!
+Arch is now installed!
 
-Don't forget to do post-installation steps like add new user (myself) and setup `sudo`.
+Don't forget to do post-installation steps like setup network, add new user, setup `sudo`, etc.
 
 # FAQ
+
+- **No internet**
+Need to setup DHCP client and local DNS. Can be done by configuring and enabling two systemd services: `systemd-networkd` and `systemd-resolved`. More info in the [Wiki](https://wiki.archlinux.org/index.php/Systemd-networkd).
 
 - **What about TRIM?**  
 Automatic TRIM is not enabled (no `discard` option in `/etc/fstab`). But mapping device (`/dev/mapper/system`) will redirect TRIM events to real SSD since we've specified `rd.luks.options=discard` kernel option. You need to issue TRIM events via `fstrim` service: [see this article](https://wiki.archlinux.org/index.php/Solid_state_drive#Periodic_TRIM).
 
 - **What about Swap?**  
-Need to figure that out.
+Not needed.
 
