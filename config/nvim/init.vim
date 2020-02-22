@@ -2,10 +2,8 @@
 
 " import children configs
 let $plugins = stdpath('config') . '/plugins.vimrc'
-let $coc = stdpath('config') . '/coc.vimrc'
 let $netrw = stdpath('config') . '/netrw.vimrc'
 source $plugins
-source $coc
 source $netrw
 
 " hide buffers instead of saving
@@ -38,13 +36,10 @@ set background=dark
 colorscheme edge
 highlight link HighlightedyankRegion Search
 
-" more space for messages (do I need it?)
-set cmdheight=2
-
-" coc plugin want this to display diagnostic messages early
+" display diagnostic messages early
 set updatetime=300
 
-" coc plugin want this
+" unsure
 set shortmess+=c
 
 " show info and line columns on the left

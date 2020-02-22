@@ -2,14 +2,8 @@
 
 call plug#begin(stdpath('data') . '/plugged')
 
-" LSP
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 " Multilanguage support
 Plug 'sheerun/vim-polyglot'
-
-" Tags browser
-Plug 'liuchengxu/vista.vim'
 
 " Command pallete
 Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
@@ -39,9 +33,6 @@ let g:edge_disable_italic_comment = 1
 " ===========================================
 " vimgo
 " ===========================================
-" disable vim-go :GoDef short cut (gd)
-" this is handled by LanguageClient [LC]
-let g:go_def_mapping_enabled = 0
 
 " highlighting
 let g:go_highlight_extra_types = 1
@@ -61,14 +52,8 @@ let g:go_highlight_variable_assignments = 1
 let g:lightline = {
       \ 'colorscheme': 'edge',
       \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
-      \ },
-      \ 'component_function': {
-      \   'cocstatus': 'coc#status'
+      \   'left': [ [ 'mode', 'paste' ] ]
       \ },
       \ }
 
-" use auocmd to force lightline update.
-autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 " ===========================================
