@@ -4,7 +4,7 @@ Here's used software:
 
 - **Terminal**: [kitty](https://sw.kovidgoyal.net/kitty/)
 - **Shell**: [fish](https://fishshell.com/)
-- **Editor**: [neovim](https://neovim.io/)
+- **Editor**: [emacs](https://github.com/hlissner/doom-emacs)
 - **Prompt**: [starship](https://starship.rs/)
 - **WM**: [sway](https://swaywm.org/) + [waybar](https://github.com/Alexays/Waybar)
 - **Launcher**: [fzf](https://github.com/Biont/sway-launcher-desktop)
