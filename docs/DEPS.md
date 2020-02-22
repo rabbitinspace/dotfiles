@@ -4,29 +4,25 @@ List of required/recommended dependencies for new Arch installation:
 
 ```bash
 sway                      # window manager
+waybar                    # toolbar
 mako                      # notifications daemon
 libnotify                 # DNS implementation
-waybar                    # toolbar
-ly                        # display manager
 wl-clipboard              # clipoard utilities
 
 kitty                     # terminal emulator
-imagemagick               # for kitty to display images
 fish                      # shell
-starship                  # fish prompt
-ttf-fira-code             # terminal fonts
-otf-nerd-fonts-fira-code  # font symbols (aur)
+starship                  # fish prompt (aur)
+ttf-jetbrains-mono        # terminal fonts
 
 fzf                       # fuzzy search (used in launcher)
 neovim                    # text editor
 yay                       # AUR helper (manual installation)
-tig                       # git TUI
-ripgrep                   # cool grep
+lazygit                   # git interface (aur)
+ripgrep                   # cooler grep
+fd                        # cooler find
 
 git                       # to get dotfiles
 git-lfs                   # to get dotfiles resources
-nodejs                    # for coc.nvim
-npm                       # for coc.nvim
 openssh                   # git over ssh
 
 alsa-utils                # alsamixer
