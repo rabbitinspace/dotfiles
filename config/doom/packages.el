@@ -50,3 +50,6 @@
 ;; This is required for some packages whose default branch isn't 'master' (which
 ;; our package manager can't deal with; see raxod502/straight.el#279)
 ;(package! builtin-package :recipe (:branch "develop"))
+
+(package! term-cursor
+  :recipe (:host github :repo "h0d/term-cursor.el"))

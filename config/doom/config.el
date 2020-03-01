@@ -50,3 +50,4 @@
 ;; they are implemented.
 
 (modify-syntax-entry ?_ "w")
+(global-term-cursor-mode)
