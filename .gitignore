@@ -14,3 +14,15 @@ config/Zeal
 
 config/jesseduffield/lazygit/state.yml
 config/dlv/.dbg_history
+config/fish/.private.fish
+
+config/fish/completions/
+config/fish/fishfile
+config/fisher/
+
+config/fish/functions/
+!config/fish/functions/lg.fish
+!config/fish/functions/edge_neon_colors.fish
+
+config/doom/flycheck_config.elc
+config/doom/flycheck_init.elc
