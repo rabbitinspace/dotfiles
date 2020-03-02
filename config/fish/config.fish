@@ -18,3 +18,16 @@ if test -z "$DISPLAY" && test (tty) = /dev/tty1
   set -x XKB_DEFAULT_LAYOUT us
   exec sway
 end
+
+# rbenv
+if which rbenv >/dev/null
+  status --is-interactive; and source (rbenv init -|psub)
+end
+
+# nix
+if type -q bass
+  set source_path $HOME/.nix-profile/etc/profile.d/nix.sh
+  if test -f $source_path
+    bass source $source_path
+  end
+end
