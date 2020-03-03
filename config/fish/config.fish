@@ -38,3 +38,8 @@ if type -q bass
     bass source $source_path
   end
 end
+
+# nim
+if test -d $HOME/.nimble
+  set PATH /Users/rbbtnspc/.nimble/bin $PATH
+end
