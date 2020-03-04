@@ -51,7 +51,4 @@
 
 (modify-syntax-entry ?_ "w")
 (global-term-cursor-mode)
-
-(after! geiser
-  (setq geiser-guile-binary (executable-find "guile-3.0"))
-  (setq geiser-active-implementations '(guile)))
+(setq rustic-lsp-server 'rust-analyzer)
