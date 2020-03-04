@@ -39,7 +39,7 @@ if type -q bass
   end
 end
 
-# nim
-if test -d $HOME/.nimble
-  set PATH /Users/rbbtnspc/.nimble/bin $PATH
+# rust
+if test -d $HOME/.cargo
+  set PATH $HOME/.cargo/bin $PATH
 end
