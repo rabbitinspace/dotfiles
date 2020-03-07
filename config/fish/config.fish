@@ -27,7 +27,7 @@ if test -z "$DISPLAY" && test (tty) = /dev/tty1
 end
 
 # rbenv
-if which rbenv >/dev/null
+if type -q rbenv
   status --is-interactive; and source (rbenv init -|psub)
 end
 
