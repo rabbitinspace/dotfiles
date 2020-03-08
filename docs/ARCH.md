@@ -146,7 +146,7 @@ reboot
 
 Arch is now installed!
 
-Don't forget to do post-installation steps like setup network, add new user, setup `sudo`, etc.
+Don't forget to do post-installation steps like setup network, add new user, setup `sudo`, time sync (systemd), etc.
 
 # FAQ
 
