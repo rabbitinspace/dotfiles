@@ -2,8 +2,10 @@ set WORK_DIR (dirname (status --current-filename))
 
 # environment variables
 set -x EDITOR nvim
-set -x GOBIN /usr/local/bin
-set -x GOPATH "$HOME"/.go
+set -x GOBIN $HOME/.go/bin
+set -x GO111MODULE on
+
+set PATH $HOME/.go/bin $PATH
 
 # wayland
 set -x MOZ_ENABLE_WAYLAND 1

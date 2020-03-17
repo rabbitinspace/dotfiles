@@ -26,3 +26,4 @@ config/fish/functions/
 
 config/doom/flycheck_config.elc
 config/doom/flycheck_init.elc
+config/VirtualBox/
