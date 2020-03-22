@@ -11,6 +11,13 @@ set PATH $HOME/.go/bin $PATH
 set -x MOZ_ENABLE_WAYLAND 1
 set -x QT_QPA_PLATFORM wayland-egl
 
+# bootstrap fisher
+if not functions -q fisher
+  set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+  fish -c fisher
+end
+
 # private env vars
 if test -f $WORK_DIR/.private.fish
   source $WORK_DIR/.private.fish
