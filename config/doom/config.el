@@ -52,3 +52,4 @@
 (modify-syntax-entry ?_ "w")
 (global-term-cursor-mode)
 (setq rustic-lsp-server 'rust-analyzer)
+(setq sh-indentation 2)
