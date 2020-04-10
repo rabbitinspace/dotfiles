@@ -9,10 +9,17 @@ Here's used software:
 - **WM**: [sway](https://swaywm.org/) + [waybar](https://github.com/Alexays/Waybar)
 - **Launcher**: [bemenu](https://github.com/Cloudef/bemenu)
 
+## Requirements
+
+- Everything from ^
+- [`pywal`](https://github.com/dylanaraps/pywal)
+- [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
+
 ## Installation
 
 ```bash
 cd $HOME
 git clone git@github.com:rabbitinspace/dotfiles.git .dotfiles
 ln -s .dotfiles/config .config
+fisher
 ```
