@@ -102,3 +102,7 @@ if test -z "$DISPLAY" && test (tty) = /dev/tty1
   end
 end
 # }}}
+
+# aliases  {{{
+alias lg=lazygit
+# }}}
