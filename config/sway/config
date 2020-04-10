@@ -34,7 +34,6 @@ floating_modifier $mod normal
 bindsym $mod+Return exec $term
 
 # open launcher
-for_window [app_id="^launcher$"] floating enable, border pixel 4, sticky enable, resize set 1200 400
 bindsym $mod+d exec $menu
 
 # control

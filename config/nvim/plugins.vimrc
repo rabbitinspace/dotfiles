@@ -17,18 +17,10 @@ Plug 'itchyny/lightline.vim'
 " Git changes on left side
 Plug 'mhinz/vim-signify'
 
-" Color scheme
-Plug 'sainnhe/edge'
+" Wal colors
+Plug 'sprockmonty/wal.vim'
 
 call plug#end()
-
-
-" ===========================================
-" edge
-" ===========================================
-let g:edge_style = 'neon'
-let g:edge_disable_italic_comment = 1
-" ===========================================
 
 " ===========================================
 " vimgo
@@ -50,7 +42,7 @@ let g:go_highlight_variable_assignments = 1
 " lightline
 " ===========================================
 let g:lightline = {
-      \ 'colorscheme': 'edge',
+      \ 'colorscheme': 'wal',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ] ]
       \ },

@@ -33,8 +33,9 @@ set noshowmode
 " colors
 set termguicolors
 set background=dark
-colorscheme edge
+colorscheme wal
 highlight link HighlightedyankRegion Search
+exe 'hi CursorLine ctermbg=0 guibg='.g:color0.' ctermfg=NONE guifg=NONE'
 
 " display diagnostic messages early
 set updatetime=300
