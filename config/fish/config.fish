@@ -59,6 +59,12 @@ if not functions -q fisher
 end
 # }}}
 
+# colors {{{
+if test -e $WORK_DIR/theme.fish
+  source $WORK_DIR/theme.fish
+end
+# }}}
+
 # {{{ rbenv
 if type -q rbenv
   status --is-interactive; and source (rbenv init -|psub)
@@ -89,6 +95,10 @@ end
 # sway {{{
 if test -z "$DISPLAY" && test (tty) = /dev/tty1
   set -x XKB_DEFAULT_LAYOUT us
-  exec sway
+  if type -q dbus-launch
+    exec dbus-launch sway
+  else
+    exec sway
+  end
 end
 # }}}

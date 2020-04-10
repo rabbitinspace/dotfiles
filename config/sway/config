@@ -1,5 +1,6 @@
 # variables
 include vars.conf
+include style.conf
 
 # waybar
 bar {
@@ -13,7 +14,6 @@ exec $notid
 xwayland disable
 
 # display
-output * bg $HOME/.config/sway/bg.png fill
 output HDMI-A-1 scale 2
 
 # mouse
@@ -138,4 +138,3 @@ bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # imports
 include /etc/sway/config.d/*
-include style.conf

@@ -1,4 +1,5 @@
 {
+  "wallpaper": "$XDG_CONFIG_HOME/wal/bg.png",
   "special":{
       "background": "#1C1E26",
       "foreground": "#FDF0ED",

@@ -1,12 +1,1 @@
-# Configuration for mako notifications daemon
-
-anchor=top-right
-background-color=#23252e
-text-color=#bcc3d2
-border-color=#f07e7e
-
-margin=16
-padding=8
-border-size=4
-
-icons=0
+/home/rbbtnspc/.cache/wal/mako.conf

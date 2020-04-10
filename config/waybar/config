@@ -1,6 +1,6 @@
 // Configuration for waybar
 {
-    "layer": "top",
+    "layer": "bottom",
     "modules-left": ["sway/workspaces", "sway/mode"],
     "modules-right": ["pulseaudio", "clock"],
     "pulseaudio": {

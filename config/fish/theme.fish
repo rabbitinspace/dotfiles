@@ -1,0 +1,1 @@
+/home/rbbtnspc/.cache/wal/colors.fish

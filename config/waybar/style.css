@@ -1,4 +1,7 @@
 /* Styling configuration for waybar */
+
+@import url('colors.css');
+
 * {
     border: none;
     border-radius: 0;
@@ -14,33 +17,32 @@ window#waybar {
 #workspaces button {
     padding: 2px 5px;
     background-color: transparent;
-    color: #88909f;
-    /* border-bottom: 2px solid transparent; */
+    color: @color7;
 }
 
 #workspaces button:hover {
-    color: #d898eb;
+    color: @color5;
 
     box-shadow: inherit;
     text-shadow: inherit;
-    background: #23252e;
+    background: @background;
     border: none;
     padding: 0 5px;
 }
 
 #workspaces button.focused {
-    color: #d898eb;
-    border-bottom: 2px solid #d898eb;
+    color: @color5;
+    border-bottom: 2px solid @color5;
 }
 
 #workspaces button.urgent {
-    background-color: #d0b073;
+    background-color: @color3;
 }
 
 #clock,
 #pulseaudio {
     padding: 2px 5px;
     margin: 0 0 0 4px;
-    color: #88909f;
-    border-bottom: 2px solid #88909f;
+    color: @color5;
+    border-bottom: 2px solid @color5;
 }
