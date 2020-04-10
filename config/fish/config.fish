@@ -103,6 +103,12 @@ if test -z "$DISPLAY" && test (tty) = /dev/tty1
 end
 # }}}
 
+# ssh {{{
+if type -q fish_ssh_agent
+  fish_ssh_agent
+end
+# }}}
+
 # aliases  {{{
 alias lg=lazygit
 # }}}
