@@ -5,9 +5,6 @@ call plug#begin(stdpath('data') . '/plugged')
 " Multilanguage support
 Plug 'sheerun/vim-polyglot'
 
-" Command pallete
-Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
-
 " Highlight yanked text
 Plug 'machakann/vim-highlightedyank'
 
