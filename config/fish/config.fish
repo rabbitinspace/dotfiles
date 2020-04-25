@@ -93,7 +93,7 @@ end
 # }}}
 
 # sway {{{
-if test -z "$DISPLAY" && test (tty) = /dev/tty1
+if type -q sway && test -z "$DISPLAY" && test (tty) = /dev/tty1
   set -x XKB_DEFAULT_LAYOUT us
   if type -q dbus-launch
     exec dbus-launch sway
