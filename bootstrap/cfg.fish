@@ -26,7 +26,7 @@ function cfg_configs
   end
 
   # link user configuration
-  mkdir -p XDG_CONFIG_HOME
+  mkdir -p $XDG_CONFIG_HOME
   for dir in $ROOT/config/*
     if ! test -d $dir
       continue
@@ -48,10 +48,21 @@ function cfg_wal
   wal --theme horizon
 end
 
+# Installs cursor theme.
+function cfg_cursors
+  if test -d $HOME/.icons
+    rm -rf $HOME/.icons
+  end
+
+  mkdir -p $HOME/.icons || return 1
+  unzip $ROOT/resources/layan-border.zip -d $HOME/.icons || return 1
+end
+
 function main
   cfg_x || return 1
   cfg_configs || return 1
   cfg_wal || return 1
+  cfg_cursor || return 1
 end
 
 main $argv

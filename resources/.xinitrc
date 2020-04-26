@@ -1,57 +1,61 @@
-#!/usr/bin/env fish
+#/usr/bin/env bash
+
+set -euo
 
 # Applies system and user X configurations.
-function merge_configs
-  set sxrs /etc/X11/xinit/.Xresources
-  set sxkb /etc/X11/xinit/.Xmodmap
-  set uxrc "$HOME/.Xresources"
-  set uxkb "$HOME/.Xmodmap"
+merge_configs() {
+  local sxrc="/etc/X11/xinit/.Xresources"
+  local sxkb="/etc/X11/xinit/.Xmodmap"
+  local uxrc="$HOME/.Xresources"
+  local uxkb="$HOME/.Xmodmap"
 
-  if test -e sxrc
-    xrdb -merge $sxrc || return 1
-  end
+  if [[ -e "$sxrc" ]]; then
+    xrdb -merge $sxrc
+  fi
 
-  if test -e sxkb
-    xmodmap $sxkb || return 1
-  end
+  if [[ -e "$sxkb" ]]; then
+    xmodmap $sxkb
+  fi
 
-  if test -e uxrc
-    xrdb -merge $uxrc || return 1
-  end
+  if [[ -e "$uxrc" ]]; then
+    xrdb -merge $uxrc
+  fi
 
-  if test -e uxkb
-    xmodmap $uxkb || return 1
-  end
-end
+  if [[ -e "$uxkb" ]]; then
+    xmodmap $uxkb
+  fi
+}
 
 # Applies additional xinitrc scripts.
-function start_sxrcs
-  set path /etc/X11/xinit/xinitrc.d
-  if test -d $path
-    for file in $path/?*.sh
-      if test -x $file
-        $file || return 1
-      end
-    end
-  end
-end
+start_sxrcs() {
+  local path=/etc/X11/xinit/xinitrc.d
+  if [[ ! -d "$path" ]]; then
+    return
+  fi
+
+  for file in "$path"/?*.sh; do
+    if [[ -x "$file" ]]; then
+      . "$file"
+    fi
+  done
+}
 
 # Fixes cursor theme doesn't change.
-function fix_cursor
+fix_cursor() {
   # https://wiki.archlinux.org/index.php/Cursor_themes#Cursor_size_doesn't_change_on_startup
-  xrandr || return 1
+  xrandr
 
   # https://wiki.archlinux.org/index.php/Cursor_themes#Change_X_shaped_default_cursor
-  xsetroot -cursor_name left_ptr || return 1
-end
+  xsetroot -cursor_name left_ptr
+}
 
 # Starts WM
-function main
-  fix_cursor || return 1
-  merge_configs || return 1
-  start_sxrcs || return 1
+main() {
+  fix_cursor
+  merge_configs
+  start_sxrcs
 
   exec bspwm
-end
+}
 
-main $argv
+main "$@"

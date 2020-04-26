@@ -52,7 +52,7 @@
 ;; they are implemented.
 
 (modify-syntax-entry ?_ "w")
-(global-term-cursor-mode)
+;; (global-term-cursor-mode)
 (setq rustic-lsp-server 'rust-analyzer)
 (setq sh-indentation 2)
 (setq fish-indent-offset 2)
