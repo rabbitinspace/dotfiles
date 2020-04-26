@@ -12,3 +12,7 @@ Xft.rgba: rgb
 ! Set cursor
 Xcursor.theme: layan-border
 Xcursor.size: 32
+
+! Run rofi commands in fish shell
+! May be slow if config.fish is slow
+rofi.run-command: fish -c '{cmd}'

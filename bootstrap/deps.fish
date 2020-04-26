@@ -81,7 +81,8 @@ function install_utils
     fd \
     ripgrep \
     exa \
-    unzip
+    unzip \
+    killall
 end
 
 function main

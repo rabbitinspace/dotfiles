@@ -43,9 +43,15 @@ function cfg_configs
   end
 end
 
+# Applies global theme.
+function cfg_wal
+  wal --theme horizon
+end
+
 function main
   cfg_x || return 1
   cfg_configs || return 1
+  cfg_wal || return 1
 end
 
 main $argv
