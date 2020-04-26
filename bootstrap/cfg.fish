@@ -14,7 +14,7 @@ function cfg_x
   sudo mkdir -p /etc/X11/xorg.conf.d/ || return 1
   set confs 20-amdgpu.conf
   for conf in $confs
-    sudo ln -sf $ROOT/resouces/$conf /etc/X11/xorg.conf.d/$conf || return 1
+    sudo cp -f $ROOT/resources/$conf /etc/X11/xorg.conf.d/$conf || return 1
   end
 end
 
@@ -55,14 +55,14 @@ function cfg_cursors
   end
 
   mkdir -p $HOME/.icons || return 1
-  unzip $ROOT/resources/layan-border.zip -d $HOME/.icons || return 1
+  unzip -q $ROOT/resources/layan-border.zip -d $HOME/.icons || return 1
 end
 
 function main
   cfg_x || return 1
   cfg_configs || return 1
   cfg_wal || return 1
-  cfg_cursor || return 1
+  cfg_cursors || return 1
 end
 
 main $argv

@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#/usr/bin/env sh
 
 set -euo
 
@@ -9,32 +9,32 @@ merge_configs() {
   local uxrc="$HOME/.Xresources"
   local uxkb="$HOME/.Xmodmap"
 
-  if [[ -e "$sxrc" ]]; then
-    xrdb -merge $sxrc
+  if [ -e "$sxrc" ]; then
+    xrdb -merge "$sxrc"
   fi
 
-  if [[ -e "$sxkb" ]]; then
-    xmodmap $sxkb
+  if [ -e "$sxkb" ]; then
+    xmodmap "$sxkb"
   fi
 
-  if [[ -e "$uxrc" ]]; then
-    xrdb -merge $uxrc
+  if [ -e "$uxrc" ]; then
+    xrdb -merge "$uxrc"
   fi
 
-  if [[ -e "$uxkb" ]]; then
-    xmodmap $uxkb
+  if [ -e "$uxkb" ]; then
+    xmodmap "$uxkb"
   fi
 }
 
 # Applies additional xinitrc scripts.
 start_sxrcs() {
   local path=/etc/X11/xinit/xinitrc.d
-  if [[ ! -d "$path" ]]; then
+  if [ ! -d "$path" ]; then
     return
   fi
 
   for file in "$path"/?*.sh; do
-    if [[ -x "$file" ]]; then
+    if [ -x "$file" ]; then
       . "$file"
     fi
   done
@@ -51,9 +51,9 @@ fix_cursor() {
 
 # Starts WM
 main() {
-  fix_cursor
   merge_configs
   start_sxrcs
+  fix_cursor
 
   exec bspwm
 }
