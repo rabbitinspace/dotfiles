@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env fish
 #
 # Installs all dependencies for a fresh system installation.
 
@@ -15,7 +15,9 @@ function install_xorg
   pkg_install \
     xorg-minimal \
     xf86-video-amdgpu \
-    xf86-input-libinput
+    xf86-input-libinput \
+    mesa \
+    mesa-vdpau
 end
 
 # Installs packages required for graphical session.

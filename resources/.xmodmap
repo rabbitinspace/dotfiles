@@ -1,0 +1,7 @@
+! Clear CapsLock and Control
+clear lock
+clear control
+
+! Use CapsLock as Escape
+remove Lock = Caps_Lock
+keysym Caps_Lock = Escape
