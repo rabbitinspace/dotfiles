@@ -7,7 +7,7 @@
 # Args:
 #   $argv - list of packages to install.
 function pkg_install
-  xbps-install --force --sync --yes $argv
+  sudo xbps-install --force --sync --yes $argv
 end
 
 # Installs Xorg related packages.
@@ -81,8 +81,7 @@ function install_utils
     fd \
     ripgrep \
     exa \
-    unzip \
-    killall
+    unzip
 end
 
 function main

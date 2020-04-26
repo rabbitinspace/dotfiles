@@ -33,13 +33,13 @@ function cfg_configs
     end
 
     # remove existing directories if exists
-    set cdir $XDG_CONFIG_HOME/$dir
+    set cdir $XDG_CONFIG_HOME/(basename $dir)
     if test -d $cdir && ! test -h $cdir
       rm -rf $cdir || return 1
     end
 
     # and link it
-    ln -sf $ROOT/config/$dir $cdir || return 1
+    ln -sf $dir $cdir || return 1
   end
 end
 
