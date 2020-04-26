@@ -51,8 +51,16 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
+;; restore default word movement
 (modify-syntax-entry ?_ "w")
-;; (global-term-cursor-mode)
-(setq rustic-lsp-server 'rust-analyzer)
-(setq sh-indentation 2)
-(setq fish-indent-offset 2)
+(setq +treemacs-git-mode 'deferred)
+(setq doom-modeline-height 16)
+
+(setq-hook! 'rustic-mode-hook
+  rustic-lsp-server 'rust-analyzer)
+
+(setq-hook! 'sh-mode-hook
+  sh-indentation 2)
+
+(setq-hook! 'fish-mode-hook
+  fish-indent-offset 2)

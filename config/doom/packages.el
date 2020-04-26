@@ -52,6 +52,3 @@
 ;(package! builtin-package :recipe (:branch "develop"))
 
 (unpin! t)
-
-(package! term-cursor
-  :recipe (:host github :repo "h0d/term-cursor.el"))
