@@ -12,7 +12,7 @@ function cfg_x
 
   # link X configuration
   sudo mkdir -p /etc/X11/xorg.conf.d/ || return 1
-  set confs 20-amdgpu.conf
+  set confs 20-amdgpu.conf 40-fonts.conf
   for conf in $confs
     sudo cp -f $ROOT/resources/$conf /etc/X11/xorg.conf.d/$conf || return 1
   end

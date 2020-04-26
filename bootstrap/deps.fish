@@ -16,6 +16,7 @@ function install_xorg
     xorg-minimal \
     xf86-video-amdgpu \
     xf86-input-libinput \
+    noto-fonts-ttf \
     mesa \
     mesa-vdpau
 end
