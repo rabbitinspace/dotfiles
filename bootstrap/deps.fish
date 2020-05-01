@@ -20,6 +20,7 @@ function install_xorg
     noto-fonts-ttf-exta \
     noto-fonts-cjk \
     noto-fonts-emoji \
+    font-awesome5 \
     mesa \
     mesa-vdpau
 end
