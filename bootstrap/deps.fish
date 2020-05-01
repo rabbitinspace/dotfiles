@@ -39,7 +39,8 @@ function install_wm_util
     dunst \
     polybar \
     rofi \
-    dbus
+    dbus \
+    tdrop
 end
 
 # Installs terminal and related packages.

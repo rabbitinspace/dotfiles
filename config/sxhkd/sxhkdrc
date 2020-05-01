@@ -6,6 +6,10 @@
 super + {_,shift} + Return
 	kitty {_,--name floating}
 
+# scratchpad
+super + underscore
+	tdrop -ma -w 50% -h 30% -x 25% -y 8 kitty
+
 # program launcher
 super + {_,shift} + @space
 	rofi -show {drun,run}
