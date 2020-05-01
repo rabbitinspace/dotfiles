@@ -2,6 +2,13 @@
 
 set -euo
 
+prepare_dirs() {
+  mkdir -p "$HOME/.cache/wal"
+  if [ ! -e "$HOME/.cache/wal/colors.Xresources" ]; then
+    touch "$HOME/.cache/wal/colors.Xresources"
+  fi
+}
+
 # Applies system and user X configurations.
 merge_configs() {
   local sxrc="/etc/X11/xinit/.Xresources"
@@ -10,7 +17,7 @@ merge_configs() {
   local uxkb="$HOME/.Xmodmap"
 
   if [ -e "$sxrc" ]; then
-    xrdb -merge "$sxrc"
+    xrdb -I"$HOME" -merge "$sxrc"
   fi
 
   if [ -e "$sxkb" ]; then
@@ -18,7 +25,7 @@ merge_configs() {
   fi
 
   if [ -e "$uxrc" ]; then
-    xrdb -merge "$uxrc"
+    xrdb -I"$HOME" -merge "$uxrc"
   fi
 
   if [ -e "$uxkb" ]; then
@@ -51,6 +58,7 @@ fix_cursor() {
 
 # Starts WM
 main() {
+  prepare_dirs
   merge_configs
   start_sxrcs
   fix_cursor

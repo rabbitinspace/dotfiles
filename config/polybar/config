@@ -1,21 +1,31 @@
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
+background = ${xrdb:background:#222}
+background-alt = ${xrdb:background-alt:#00f}
+foreground = ${xrdb:foreground:#222}
+foreground-alt = ${xrdb:foreground-alt:#0f0}
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
 
-[bar/main]
-modules-left                = bspwm
-modules-right               = volume date time
-wm-restack                  = bspwm
+[bar/desktop]
+width           = 440
+height          = 44
+offset-x        = 8
+offset-y        = 8
+
+background      = ${colors.background}
+foreground      = ${colors.foreground}
+
+font-0          = "Noto Mono:size=6;2"
+dpi-x           = 192
+dpi-y           = 192
+
+modules-left    = bspwm
+wm-restack      = bspwm
+wm-name         = bspwm
 
 [module/bspwm]
-type = internal/bspwm
+type                = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}

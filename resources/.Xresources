@@ -1,3 +1,6 @@
+! Include wal colors
+#include ".cache/wal/colors.Xresources"
+
 ! Set DPI
 Xft.dpi: 192
 

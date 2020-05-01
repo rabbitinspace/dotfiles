@@ -8,7 +8,7 @@ function main
   while pgrep -u (id -u) -x polybar >/dev/null; sleep 1; end
 
   # start polybar
-  polybar main &
+  polybar desktop &
 end
 
 main $argv
