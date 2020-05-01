@@ -17,6 +17,9 @@ sxhkd &
 # start compositor
 picom -b --experimental-backends
 
+# background image
+feh --no-fehbg --bg-scale $XDG_CONFIG_HOME/wal/bg.png
+
 # start polybar
 $XDG_CONFIG_HOME/polybar/start.fish
 
