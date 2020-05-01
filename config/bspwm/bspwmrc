@@ -15,7 +15,7 @@ set -x SXHKD_SHELL (which bash)
 sxhkd &
 
 # start compositor
-picom -b
+picom -b --experimental-backends
 
 # start polybar
 $XDG_CONFIG_HOME/polybar/start.fish
