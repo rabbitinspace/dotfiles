@@ -18,14 +18,16 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "JetBrains Mono" :size 13))
+(if IS-MAC
+    (setq doom-font (font-spec :family "JetBrains Mono" :size 13)))
+
+(if IS-LINUX
+    (setq doom-font (font-spec :family "JetBrains Mono" :size 24)))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. These are the defaults.
-(setq doom-theme 'doom-one)
-(when IS-MAC
-  (setq doom-theme 'doom-horizon))
+(setq doom-theme 'doom-horizon)
 
 ;; If you intend to use org, it is recommended you change this!
 (setq org-directory "~/org/")
