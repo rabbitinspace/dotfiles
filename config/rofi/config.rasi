@@ -2,16 +2,15 @@ configuration {
 /*	modi: "window,run,ssh";*/
 	width: 50;
 	lines: 6;
-/*	columns: 1;*/
 	font: "JetBrains Mono 8";
-/*	bw: 1;*/
+	bw: 0;
 	location: 2;
 /*	padding: 5;*/
 	yoffset: 8;
 /*	xoffset: 0;*/
 /*	fixed-num-lines: true;*/
 /*	show-icons: false;*/
-/*	terminal: "rofi-sensible-terminal";*/
+	terminal: "kitty";
 /*	ssh-client: "ssh";*/
 /*	ssh-command: "{terminal} -e {ssh-client} {host} [-p {port}]";*/
 	run-command: "fish -c '{cmd}'";
