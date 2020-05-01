@@ -5,7 +5,7 @@ set ROOT (type -q git && git rev-parse --show-toplevel 2>/dev/null || pwd)
 # Sets up X configuration.
 function cfg_x
   # link startup configuration
-  set links .xinitrc .xmodmap .Xresources
+  set links .xinitrc .Xmodmap .Xresources
   for link in $links
     ln -sf $ROOT/resources/$link $HOME/$link || return 1
   end
