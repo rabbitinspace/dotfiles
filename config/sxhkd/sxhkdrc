@@ -7,8 +7,8 @@ super + {_,shift} + Return
 	kitty {_,--name floating}
 
 # program launcher
-super + @space
-	rofi -show drun
+super + {_,shift} + @space
+	rofi -show {drun,run}
 
 # make sxhkd reload its configuration files:
 super + alt + k
