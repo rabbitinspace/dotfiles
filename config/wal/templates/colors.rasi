@@ -1,0 +1,45 @@
+* {{
+    background-color: {background};
+    border: 2;
+    padding: 0;
+    margin: 0;
+    spacing: 0;
+}}
+
+window {{
+  border-color: {color5};
+}}
+
+mainbox {{
+  children: [inputbar, listview];
+}}
+
+listview {{
+  columns: 1;
+}}
+
+element {{
+  padding: 8px 4px;
+  text-color: {foreground};
+}}
+
+element selected {{
+  background-color: {foreground};
+  text-color: {background};
+}}
+
+inputbar {{
+  background-color: {background};
+  children: [prompt, entry];
+}}
+
+prompt {{
+  padding: 4px 0;
+  enabled: true;
+  text-color: {color2};
+}}
+
+entry {{
+  padding: 4px 0;
+  text-color: {foreground};
+}}
