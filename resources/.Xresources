@@ -13,5 +13,5 @@ Xft.antialias: 1
 Xft.rgba: rgb
 
 ! Set cursor
-Xcursor.theme: layan-border
+Xcursor.theme: capitaine-cursors-light
 Xcursor.size: 32

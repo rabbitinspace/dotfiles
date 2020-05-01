@@ -16,11 +16,6 @@ if test -f $WORK_DIR/.private.fish
 end
 # }}}
 
-# wayland {{{
-set -x MOZ_ENABLE_WAYLAND 1
-set -x QT_QPA_PLATFORM wayland-egl
-# }}}
-
 # xdg {{{
 if test ! (set -q XDG_DATA_HOME)
   set -x XDG_DATA_HOME $HOME/.local/share
@@ -92,14 +87,10 @@ if type -q _pure_prompt_git
 end
 # }}}
 
-# sway {{{
-if type -q sway && test -z "$DISPLAY" && test (tty) = /dev/tty1
+# xorg {{{
+if type -q startx && test -z "$DISPLAY" && test (tty) = /dev/tty1
   set -x XKB_DEFAULT_LAYOUT us
-  if type -q dbus-launch
-    exec dbus-launch sway
-  else
-    exec sway
-  end
+  startx
 end
 # }}}
 

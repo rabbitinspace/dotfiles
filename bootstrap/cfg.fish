@@ -55,7 +55,7 @@ function cfg_cursors
   end
 
   mkdir -p $HOME/.icons || return 1
-  unzip -q $ROOT/resources/layan-border.zip -d $HOME/.icons || return 1
+  unzip -q $ROOT/resources/capitaine-cursors-light.zip -d $HOME/.icons || return 1
 end
 
 function main
