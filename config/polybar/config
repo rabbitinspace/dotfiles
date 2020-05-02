@@ -1,5 +1,5 @@
 # Base configuration
-#
+
 
 [colors]
 background = ${xrdb:background:#222}
@@ -16,7 +16,7 @@ padding-right   = 1
 
 font-0          = "JetBrains Mono:style=Regular:size=8;4"
 font-1          = "Noto Sans:style=Regular:size=8;4"
-font-2          = "Font Awesome 5 Free:style=Regular:size=8;4"
+font-2          = "Font Awesome 5 Free:style=Solid:size=8;4"
 background      = ${colors.background}
 foreground      = ${colors.foreground}
 dpi-x           = 192
@@ -50,6 +50,13 @@ offset-x        = 100%:-344
 modules-right   = date-label date
 
 
+[bar/pulse]
+inherit = section/base-bar
+width = 203
+offset-x = 100%:-556
+modules-right = pulse
+
+
 # Modules
 
 
@@ -59,12 +66,14 @@ type                    = internal/bspwm
 format                  = <label-state>
 
 label-separator = " "
-label-active            = 
-label-occupied          = 
-label-urgent            = 
-label-empty             = 
+label-active            = ""
+label-occupied          = ""
+label-urgent            = ""
+label-empty             = ""
 
 label-active-foreground = ${colors.active}
+label-urgent-foreground = ${colors.foreground}
+label-empty-foreground = ${colors.foreground}
 
 
 [module/time-label]
@@ -103,3 +112,18 @@ label = %date%
 date = "%a, %b %d"
 date-alt =
 interval = 60
+
+
+[module/pulse]
+type = custom/script
+
+tail = true
+label = %output%
+
+exec = pulse.sh listen
+click-right = exec pavucontrol &
+click-left = pulse.sh togmute
+click-middle = pulse.sh next-sink
+scroll-up = pulse.sh up
+scroll-down = pulse.sh down
+label-foreground = ${colors.foreground}

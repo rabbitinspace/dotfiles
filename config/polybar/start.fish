@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+set DIR (dirname (status --current-filename))
+
 function main
   # terminate already running bar instances
   pkill -x polybar
@@ -8,7 +10,13 @@ function main
   while pgrep -u (id -u) -x polybar >/dev/null; sleep 1; end
 
   # start polybar
+
   polybar desktop &
+  polybar time &
+  polybar date &
+
+  PATH="$DIR:$PATH" \
+    polybar pulse &
 end
 
 main $argv
