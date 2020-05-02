@@ -1,19 +1,12 @@
-<p align="center">
-  
+<div align="center">
+
 # dotfiles
+
+[**Terminal**](https://sw.kovidgoyal.net/kitty/) • [**Shell**](https://fishshell.com/) • [**Editor**](https://github.com/hlissner/doom-emacs) • [**Prompt**](https://github.com/rafaelrinaldi/pure) • [**WM**](https://github.com/baskerville/bspwm) • [**Bar**](https://github.com/polybar/polybar) • [**Launcher**](https://github.com/davatorium/rofi)
 
 ![1.png](screenshots/1.png)
 
-Here's used software:
-
-- **Terminal**: [kitty](https://sw.kovidgoyal.net/kitty/)
-- **Shell**: [fish](https://fishshell.com/)
-- **Editor**: [emacs](https://github.com/hlissner/doom-emacs)
-- **Prompt**: [pure](https://github.com/rafaelrinaldi/pure)
-- **WM**: [bspwm](https://github.com/baskerville/bspwm) + [polybar](https://github.com/polybar/polybar)
-- **Launcher**: [rofi](https://github.com/davatorium/rofi)
-
-</p>
+</div>
 
 ---
 
@@ -22,11 +15,11 @@ I use Void Linux at the moment and [`abyss`](https://github.com/rabbitinspace/ab
 ## Requirements
 
 - Void Linux
-- [fish](https://fishshell.com/)
+- Fish Shell
 
 ## Installation
 
-There's a script which is supposed to setup a newly installed Void Linux distribution:
+There's a [script](bootstrap/main.fish) which is supposed to setup a newly installed Void Linux distribution:
 
 ```fish
 git clone git@github.com:rabbitinspace/dotfiles.git .dotfiles
