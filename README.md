@@ -7,19 +7,22 @@ Here's used software:
 - **Editor**: [emacs](https://github.com/hlissner/doom-emacs)
 - **Prompt**: [pure](https://github.com/rafaelrinaldi/pure)
 - **WM**: [bspwm](https://github.com/baskerville/bspwm) + [polybar](https://github.com/polybar/polybar)
-- **Launcher**: [bemenu](https://github.com/Cloudef/bemenu)
+- **Launcher**: [rofi](https://github.com/davatorium/rofi)
+
+I use Void Linux at the moment and [`abyss`](https://github.com/rabbitinspace/abyss) to bootstrap it on my hardware.
 
 ## Requirements
 
-- Everything from ^
-- [`pywal`](https://github.com/dylanaraps/pywal)
-- [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono)
+- Void Linux
+- [fish](https://fishshell.com/)
 
 ## Installation
 
-```bash
-cd $HOME
+There's a script which is supposed to setup a newly installed Void Linux distribution:
+
+```fish
 git clone git@github.com:rabbitinspace/dotfiles.git .dotfiles
-ln -s .dotfiles/config .config
-fisher
+cd .dotfiles && bootstrap/main.fish
 ```
+
+Then reboot.
