@@ -29,7 +29,7 @@ SINK_BLACKLIST=(
 
 # Maps PulseAudio sink names to human-readable names
 declare -A SINK_NICKNAMES
-SINK_NICKNAMES["alsa_output.pci-0000_2a_00.4.iec958-stereo"]="1"
+SINK_NICKNAMES["alsa_output.pci-0000_2a_00.4.iec958-stereo"]="M"
 
 
 # Environment & global constants for the script
