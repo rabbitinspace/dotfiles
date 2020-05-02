@@ -6,7 +6,7 @@ Here's used software:
 - **Shell**: [fish](https://fishshell.com/)
 - **Editor**: [emacs](https://github.com/hlissner/doom-emacs)
 - **Prompt**: [pure](https://github.com/rafaelrinaldi/pure)
-- **WM**: [sway](https://swaywm.org/) + [waybar](https://github.com/Alexays/Waybar)
+- **WM**: [bspwm](https://github.com/baskerville/bspwm) + [polybar](https://github.com/polybar/polybar)
 - **Launcher**: [bemenu](https://github.com/Cloudef/bemenu)
 
 ## Requirements
