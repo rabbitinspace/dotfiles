@@ -1,4 +1,8 @@
+<p align="center">
+  
 # dotfiles
+
+![1.png](screenshots/1.png)
 
 Here's used software:
 
@@ -8,6 +12,10 @@ Here's used software:
 - **Prompt**: [pure](https://github.com/rafaelrinaldi/pure)
 - **WM**: [bspwm](https://github.com/baskerville/bspwm) + [polybar](https://github.com/polybar/polybar)
 - **Launcher**: [rofi](https://github.com/davatorium/rofi)
+
+</p>
+
+---
 
 I use Void Linux at the moment and [`abyss`](https://github.com/rabbitinspace/abyss) to bootstrap it on my hardware.
 
