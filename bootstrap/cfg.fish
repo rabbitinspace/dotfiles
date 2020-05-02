@@ -72,6 +72,8 @@ function cfg_fonts
   sudo cp -R $ttf $path
   rm -rf jbmono
   popd
+
+  fc-cache -fv
 end
 
 # Configures everything.

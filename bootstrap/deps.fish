@@ -17,7 +17,7 @@ function install_xorg
     xf86-video-amdgpu \
     xf86-input-libinput \
     noto-fonts-ttf \
-    noto-fonts-ttf-exta \
+    noto-fonts-ttf-extra \
     noto-fonts-cjk \
     noto-fonts-emoji \
     font-awesome5 \
