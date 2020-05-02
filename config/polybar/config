@@ -6,7 +6,7 @@ background = ${xrdb:background:#222}
 foreground = ${xrdb:foreground:#222}
 active     = ${xrdb:color5:#222}
 date       = ${xrdb:color3:#222}
-time       = ${xrdb:color4:#222}
+time       = ${xrdb:color2:#222}
 
 [section/base-bar]
 height          = 44

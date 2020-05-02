@@ -8,7 +8,7 @@
 # Script configuration (more info in the README)
 
 MUTED_HEX="$(xrdb -query | grep "*color8:" | grep -Po '#([a-fA-F0-9]{6})')"
-ICON_HEX="$(xrdb -query | grep "*color2:" | grep -Po '#([a-fA-F0-9]{6})')"
+ICON_HEX="$(xrdb -query | grep "*color4:" | grep -Po '#([a-fA-F0-9]{6})')"
 
 OSD="no"  # On Screen Display message for KDE if enabled
 INC=5  # Increment when lowering/rising the volume
