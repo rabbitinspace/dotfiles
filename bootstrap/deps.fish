@@ -87,7 +87,8 @@ function install_utils
     fd \
     ripgrep \
     exa \
-    unzip
+    unzip \
+    curl
 end
 
 # Installs everything.
