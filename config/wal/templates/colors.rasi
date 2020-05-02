@@ -24,7 +24,7 @@ element {{
 }}
 
 element selected {{
-  background-color: {foreground};
+  background-color: {color5};
   text-color: {background};
 }}
 
