@@ -90,15 +90,16 @@ function install_utils
     unzip
 end
 
+# Installs everything.
 function main
-  install_xorg
-  install_wm
-  install_wm_util
-  install_term
-  install_dev
-  install_media
-  install_editors
-  install_utils
+  install_xorg && \
+    install_wm && \
+    install_wm_util && \
+    install_term && \
+    install_dev && \
+    install_media && \
+    install_editors && \
+    install_utils || return 1
 end
 
 main $argv

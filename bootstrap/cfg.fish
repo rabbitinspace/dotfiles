@@ -1,4 +1,6 @@
 #!/usr/bin/env fish
+#
+# Installs configuration and resources.
 
 set ROOT (type -q git && git rev-parse --show-toplevel 2>/dev/null || pwd)
 
@@ -58,11 +60,27 @@ function cfg_cursors
   unzip -q $ROOT/resources/capitaine-cursors-light.zip -d $HOME/.icons || return 1
 end
 
+# Installs fonts from resources.
+function cfg_fonts
+  set -l path /usr/share/fonts/JetBrainsMono
+  sudo mkdir -p $path
+
+  pushd $ROOT/resources
+  unzip -d jbmono jbmono.zip
+
+  set -l ttf (fd ttf jbmono | head -n1)
+  sudo cp -R $ttf $path
+  rm -rf jbmono
+  popd
+end
+
+# Configures everything.
 function main
   cfg_x || return 1
   cfg_configs || return 1
-  cfg_wal || return 1
   cfg_cursors || return 1
+  cfg_fonts || return 1
+  cfg_wal || return 1
 end
 
 main $argv
