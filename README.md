@@ -16,6 +16,7 @@ I use Void Linux at the moment and [`abyss`](https://github.com/rabbitinspace/ab
 
 - Void Linux
 - Fish Shell
+- Git + LFS
 
 ## Installation
 
