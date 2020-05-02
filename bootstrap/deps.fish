@@ -14,6 +14,10 @@ end
 function install_xorg
   pkg_install \
     xorg-minimal \
+    xrdb \
+    xmodmap \
+    xrandr \
+    xsetroot \
     xf86-video-amdgpu \
     xf86-input-libinput \
     noto-fonts-ttf \
