@@ -31,10 +31,10 @@ Then reboot.
 
 ### Rootless Xorg
 
-To make X run as non-root user there steps should be performed manually (for now):
+To prevent Xorg from running as the root user, it needs to be built from sources with `elogind` support:
 
 ```bash
-git clone --depth 1 --single-branch git://github.com/void-linux/void-packages.git
+git clone --depth 1 --single-branch git@github.com/void-linux/void-packages.git
 cd void-packages
 ./xbps-src binary-bootstrap
 ./xbps-src pkg xorg-server -o elogind
