@@ -29,6 +29,13 @@ function install_xorg
     mesa-vdpau
 end
 
+# Installs elogind and dbus with elogind support.
+function install_rootlessx
+  pkg_install \
+    elogind \
+    dbus-elogind
+end
+
 # Installs packages required for graphical session.
 function install_wm
   pkg_install \
@@ -43,7 +50,6 @@ function install_wm_util
     dunst \
     polybar \
     rofi \
-    dbus \
     tdrop
 end
 
@@ -98,6 +104,7 @@ end
 # Installs everything.
 function main
   install_xorg && \
+    install_rootlessx \
     install_wm && \
     install_wm_util && \
     install_term && \

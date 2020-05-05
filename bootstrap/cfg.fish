@@ -20,6 +20,16 @@ function cfg_x
   end
 end
 
+# Configures elogind to allow rootless X.
+#
+# This won't enable rootless X because xorg-server package
+# should be built from sources with elogind support:
+# ./xbps-src pkg xorg-server -o elogind
+function cfg_rootlessx
+  sudo ln -s /etc/sv/dbus /var/service/
+  sudo ln -s /etc/sv/elogind /var/service/
+end
+
 # Sets up user's configuration.
 function cfg_configs
   # define config dir location
@@ -79,6 +89,7 @@ end
 # Configures everything.
 function main
   cfg_x || return 1
+  cfg_rootlessx || return 1
   cfg_configs || return 1
   cfg_cursors || return 1
   cfg_fonts || return 1

@@ -28,3 +28,16 @@ cd .dotfiles && bootstrap/main.fish
 ```
 
 Then reboot.
+
+### Rootless Xorg
+
+To make X run as non-root user there steps should be performed manually (for now):
+
+```bash
+git clone --depth 1 --single-branch git://github.com/void-linux/void-packages.git
+cd void-packages
+./xbps-src binary-bootstrap
+./xbps-src pkg xorg-server -o elogind
+sudo xbps-install --force --repository hostdir/binpkgs xorg-server
+sudo sed 's/yes/no/' -i /etc/X11/Xwrapper.config
+```
