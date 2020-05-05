@@ -2,11 +2,13 @@
 
 
 [colors]
-background = ${xrdb:background:#222}
-foreground = ${xrdb:foreground:#222}
-active     = ${xrdb:color5:#222}
-date       = ${xrdb:color3:#222}
-time       = ${xrdb:color2:#222}
+background   = ${xrdb:background:#222}
+foreground   = ${xrdb:foreground:#222}
+bar-active   = ${xrdb:foreground:#222}
+bar-inactive = ${xrdb:color8:#222}
+bar-urgent   = ${xrdb:color9:#222}
+date         = ${xrdb:color3:#222}
+time         = ${xrdb:color2:#222}
 
 [section/base-bar]
 height          = 44
@@ -68,12 +70,13 @@ format                  = <label-state>
 label-separator = " "
 label-active            = ""
 label-occupied          = ""
-label-urgent            = ""
+label-urgent            = ""
 label-empty             = ""
 
-label-active-foreground = ${colors.active}
-label-urgent-foreground = ${colors.foreground}
-label-empty-foreground = ${colors.foreground}
+label-active-foreground = ${colors.bar-active}
+label-occupied-foreground = ${colors.bar-inactive}
+label-urgent-foreground = ${colors.bar-urgent}
+label-empty-foreground = ${colors.bar-inactive}
 
 
 [module/time-label]
