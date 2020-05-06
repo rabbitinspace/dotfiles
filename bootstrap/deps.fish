@@ -7,7 +7,7 @@
 # Args:
 #   $argv - list of packages to install.
 function pkg_install
-  sudo xbps-install --force --sync --yes $argv
+  sudo xbps-install --force --sync --yes $argv || return 1
 end
 
 # Installs Xorg related packages.
