@@ -54,3 +54,6 @@ set cursorline
 " spaces by default
 set et sw=4 sts=4 ts=4
 
+" clear last search patters by hitting ESC in normal mode
+nnoremap <ESC> :noh<CR><ESC>
+
