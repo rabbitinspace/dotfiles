@@ -14,51 +14,34 @@ end
 function install_xorg
   pkg_install \
     xorg-minimal \
-    xrdb \
-    xmodmap \
-    xrandr \
-    xsetroot \
     xf86-video-amdgpu \
     xf86-input-libinput \
     noto-fonts-ttf \
     noto-fonts-ttf-extra \
     noto-fonts-cjk \
     noto-fonts-emoji \
-    font-awesome5 \
     mesa \
     mesa-vdpau
 end
 
 # Installs elogind and dbus with elogind support.
-function install_rootlessx
+function install_de
   pkg_install \
+    kde5 \
+    kde5-baseapps \
     elogind \
-    dbus-elogind
+    dbus-elogind \
+    NetworkManager
 end
 
-# Installs packages required for graphical session.
-function install_wm
-  pkg_install \
-    bspwm \
-    picom \
-    sxhkd
-end
-
-# Installs packages to make graphical session more useful.
-function install_wm_util
-  pkg_install \
-    dunst \
-    polybar \
-    rofi \
-    tdrop
-end
-
-# Installs terminal and related packages.
-function install_term
+# Installs fish shell and related packages.
+function install_shell
   pkg_install \
     fish-shell \
-    kitty \
-    pywal
+    python3 \
+    python3-pip
+
+  sudo pip install pywal
 end
 
 # Installs developer related tools.
@@ -75,9 +58,6 @@ end
 # Installs media related packages.
 function install_media
   pkg_install \
-    feh \
-    mpv \
-    zathura \
     alsa-utils \
     apulse \
     alsa-plugins-pulseaudio \
@@ -87,7 +67,6 @@ end
 # Installs text editors.
 function install_editors
   pkg_install \
-    emacs-x11 \
     neovim
 end
 
@@ -104,10 +83,8 @@ end
 # Installs everything.
 function main
   install_xorg && \
-    install_rootlessx \
-    install_wm && \
-    install_wm_util && \
-    install_term && \
+    install_de \
+    install_shell && \
     install_dev && \
     install_media && \
     install_editors && \
