@@ -6,6 +6,12 @@ set ROOT (type -q git && git rev-parse --show-toplevel 2>/dev/null || pwd)
 
 # Sets up X configuration.
 function cfg_x
+  # link startup configuration
+  set links .xinitrc .Xmodmap .Xresources
+  for link in $links
+    ln -sf $ROOT/resources/$link $HOME/$link || return 1
+  end
+
   # link X configuration
   sudo mkdir -p /etc/X11/xorg.conf.d/ || return 1
   set confs 20-amdgpu.conf 40-fonts.conf
@@ -14,14 +20,14 @@ function cfg_x
   end
 end
 
-# Configures additional system services.
-function cfg_services
+# Configures elogind to allow rootless X.
+#
+# This won't enable rootless X because xorg-server package
+# should be built from sources with elogind support:
+# ./xbps-src pkg xorg-server -o elogind
+function cfg_rootlessx
   sudo ln -s /etc/sv/dbus /var/service/
   sudo ln -s /etc/sv/elogind /var/service/
-  sudo ln -s /etc/sv/NetworkManager /var/service/
-  sudo ln -s /etc/sv/sddm /var/service/
-
-  sudo rm /var/service/dhcpcd
 end
 
 # Sets up user's configuration.
@@ -54,6 +60,16 @@ function cfg_wal
   wal --theme horizon
 end
 
+# Installs cursor theme.
+function cfg_cursors
+  if test -d $HOME/.icons
+    rm -rf $HOME/.icons
+  end
+
+  mkdir -p $HOME/.icons || return 1
+  unzip -q $ROOT/resources/capitaine-cursors-light.zip -d $HOME/.icons || return 1
+end
+
 # Installs fonts from resources.
 function cfg_fonts
   set -l path /usr/share/fonts/JetBrainsMono
@@ -73,8 +89,9 @@ end
 # Configures everything.
 function main
   cfg_x || return 1
-  cfg_services || return 1
+  cfg_rootlessx || return 1
   cfg_configs || return 1
+  cfg_cursors || return 1
   cfg_fonts || return 1
   cfg_wal || return 1
 end
