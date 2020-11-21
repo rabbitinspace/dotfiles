@@ -1,1 +1,0 @@
-../../../.cache/wal/colors.fish

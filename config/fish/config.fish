@@ -17,39 +17,41 @@ end
 # }}}
 
 # xdg {{{
-if test ! (set -q XDG_DATA_HOME)
-  set -x XDG_DATA_HOME $HOME/.local/share
-end
-
-if test ! (set -q XDG_CONFIG_HOME)
-  set -x XDG_CONFIG_HOME $HOME/.config
-end
-
-if test ! (set -q XDG_DATA_DIRS)
-  set -x XDG_DATA_DIRS /usr/local/share/:/usr/share/
-end
-
-if test ! (set -q XDG_CONFIG_DIRS)
-  set -x XDG_CONFIG_DIRS /etc/xdg
-end
-
-if test ! (set -q XDG_CACHE_HOME)
-  set -x XDG_CACHE_HOME $HOME/.cache
-end
-
-if test ! (set -q XDG_RUNTIME_DIR)
-  set -q UID; set UID (id -u)
-  set -x XDG_RUNTIME_DIR "/tmp/$UID-runtime-dir"
-  if test ! -d $XDG_RUNTIME_DIR
-    mkdir $XDG_RUNTIME_DIR
-    chmod 0700 $XDG_RUNTIME_DIR
+if test (uname -s) = Linux
+  if test ! (set -q XDG_DATA_HOME)
+    set -x XDG_DATA_HOME $HOME/.local/share
+  end
+  
+  if test ! (set -q XDG_CONFIG_HOME)
+    set -x XDG_CONFIG_HOME $HOME/.config
+  end
+  
+  if test ! (set -q XDG_DATA_DIRS)
+    set -x XDG_DATA_DIRS /usr/local/share/:/usr/share/
+  end
+  
+  if test ! (set -q XDG_CONFIG_DIRS)
+    set -x XDG_CONFIG_DIRS /etc/xdg
+  end
+  
+  if test ! (set -q XDG_CACHE_HOME)
+    set -x XDG_CACHE_HOME $HOME/.cache
+  end
+  
+  if test ! (set -q XDG_RUNTIME_DIR)
+    set -q UID; set UID (id -u)
+    set -x XDG_RUNTIME_DIR "/tmp/$UID-runtime-dir"
+    if test ! -d $XDG_RUNTIME_DIR
+      mkdir $XDG_RUNTIME_DIR
+      chmod 0700 $XDG_RUNTIME_DIR
+    end
   end
 end
 # }}}
 
 # fisher {{{
 if not functions -q fisher
-  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+  curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
   fish -c fisher
 end
 # }}}
@@ -87,19 +89,3 @@ if type -q _pure_prompt_git
 end
 # }}}
 
-# xorg {{{
-if type -q startx && test -z "$DISPLAY" && test (tty) = /dev/tty1
-  set -x XKB_DEFAULT_LAYOUT us
-  startx
-end
-# }}}
-
-# ssh {{{
-if type -q fish_ssh_agent
-  fish_ssh_agent
-end
-# }}}
-
-# aliases  {{{
-alias lg=lazygit
-# }}}
