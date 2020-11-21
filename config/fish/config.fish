@@ -7,7 +7,9 @@ set -x EDITOR nvim
 set -x GOBIN $HOME/.go/bin
 set -x GO111MODULE on
 
-set PATH $HOME/.go/bin $HOME/.local/bin $PATH
+set -x MOZ_ENABLE_WAYLAND 1
+
+set PATH $HOME/.go/bin $HOME/.local/bin /usr/local/sbin /usr/sbin $PATH
 # }}}
 
 # private envs {{{
