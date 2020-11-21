@@ -52,7 +52,6 @@ end
 # fisher {{{
 if not functions -q fisher
   curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
-  fish -c fisher
 end
 # }}}
 
