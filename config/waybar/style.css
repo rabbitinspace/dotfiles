@@ -1,0 +1,48 @@
+/* Styling configuration for waybar */
+
+@import url('colors.css');
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: sans-serif;
+    font-size: 12px;
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+}
+
+#workspaces button {
+    padding: 2px 5px;
+    background-color: transparent;
+    color: @color7;
+}
+
+#workspaces button:hover {
+    color: @color5;
+
+    box-shadow: inherit;
+    text-shadow: inherit;
+    background: @background;
+    border: none;
+    padding: 0 5px;
+}
+
+#workspaces button.focused {
+    color: @color5;
+    border-bottom: 2px solid @color5;
+}
+
+#workspaces button.urgent {
+    background-color: @color3;
+}
+
+#clock,
+#pulseaudio {
+    padding: 2px 5px;
+    margin: 0 0 0 4px;
+    color: @color5;
+    border-bottom: 2px solid @color5;
+}
