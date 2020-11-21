@@ -17,6 +17,15 @@ Plug 'mhinz/vim-signify'
 " Wal colors
 Plug 'sprockmonty/wal.vim'
 
+" Global colors
+Plug 'arzg/vim-colors-xcode'
+
+" Paren matching
+Plug 'andymass/vim-matchup'
+
+" Autoclose parens
+Plug 'cohama/lexima.vim'
+
 call plug#end()
 
 " ===========================================
@@ -45,4 +54,20 @@ let g:lightline = {
       \ },
       \ }
 
+" ===========================================
+
+" ===========================================
+" vim-matchup
+" ===========================================
+let g:loaded_matchit = 1
+" ===========================================
+
+" ===========================================
+" vim-signify
+" ===========================================
+let g:signify_sign_add    = '┃'
+let g:signify_sign_change = '┃'
+let g:signify_sign_delete = '•'
+
+let g:signify_sign_show_count = 0
 " ===========================================
