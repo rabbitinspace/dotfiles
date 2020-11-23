@@ -52,8 +52,10 @@ end
 # }}}
 
 # fisher {{{
-if not functions -q fisher
-  curl -sL git.io/fisher | source && fisher install jorgebucaran/fisher
+if not functions -q fisher; and test -z $__FISHER_FLAG
+  set -x __FISHER_FLAG set
+  curl -sL git.io/fisher | source
+  fisher update
 end
 # }}}
 
