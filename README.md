@@ -8,7 +8,4 @@
 
 </div>
 
----
-
-I had enough ricing, thanks.
-
+_— I had enough ricing, thanks._
