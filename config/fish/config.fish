@@ -51,6 +51,13 @@ if test (uname -s) = Linux
 end
 # }}}
 
+# flatpak {{{
+if type -q flatpak
+  set -x XDG_DATA_DIRS \
+    /var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:$XDG_DATA_DIRS
+end
+#}}}
+
 # fisher {{{
 if not functions -q fisher; and test -z $__FISHER_FLAG
   set -x __FISHER_FLAG set
