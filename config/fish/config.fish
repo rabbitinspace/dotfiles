@@ -99,3 +99,9 @@ if type -q _pure_prompt_git
 end
 # }}}
 
+# sway {{{
+if test (uname -s) = Linux; and type -q sway; and test (tty) = /dev/tty1
+  set -x XDG_CURRENT_DESKTOP sway
+  exec sway
+end
+# }}}

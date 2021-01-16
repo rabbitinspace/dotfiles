@@ -1,0 +1,25 @@
+
+// Configuration for waybar
+{
+    "layer": "bottom",
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-right": ["pulseaudio", "clock"],
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": "{icon} {volume}%",
+        "format-muted": "M",
+        "format-icons": {
+            "headphones": "H",
+            "handsfree": "?",
+            "headset": "B",
+            "phone": "?",
+            "portable": "?",
+            "car": "?",
+            "default": "V"
+        },
+        "scroll-step": 1
+    },
+    "clock": {
+        "format-alt": "{:%a, %d. %b  %H:%M}"
+    }
+}
